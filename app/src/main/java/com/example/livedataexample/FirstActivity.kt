@@ -3,7 +3,7 @@ package com.example.livedataexample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
-import com.example.livedataexample.password.PasswordFragment
+import com.example.livedataexample.inputTimmer.InputTimmerFragment
 
 
 class FirstActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class FirstActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first)
 
         val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.main_container, PasswordFragment())
+        ft.replace(R.id.main_container, InputTimmerFragment())
         ft.commit()
     }
 

@@ -1,15 +1,16 @@
 package com.example.livedataexample.timmer
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.livedataexample.R
-import com.example.livedataexample.password.PasswordViewModel
 
 class TimmerFregment : Fragment() {
 
@@ -34,7 +35,10 @@ class TimmerFregment : Fragment() {
         timeLapse=  view.findViewById(R.id.timeLapse)
         btnCount=  view.findViewById(R.id.btn_count)
 
-        btnCount.setOnClickListener {    viewModel.startCounter()    }
+        val myValue = this.arguments!!.getString("message")
+
+        Toast.makeText(activity,myValue,LENGTH_LONG).show()
+        btnCount.setOnClickListener {    viewModel.startCounter(Integer.parseInt(myValue).toLong())    }
         // observing the second value of our view model class
         viewModel.seconds().observe(this, Observer {
 

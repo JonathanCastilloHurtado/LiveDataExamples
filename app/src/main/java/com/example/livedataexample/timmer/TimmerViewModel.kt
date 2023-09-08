@@ -21,10 +21,10 @@ class TimmerViewModel: ViewModel() {
 
 
     // Counter method that uses CountDownTimer()
-    fun startCounter(){
+    fun startCounter(parseInt: Long) {
 
         // you can change the millisInFuture value
-        object : CountDownTimer(5000, 100) {
+        object : CountDownTimer(parseInt, 100) {
             override fun onTick(millisUntilFinished: Long) {
                 val time = millisUntilFinished / 1000
 

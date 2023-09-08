@@ -1,10 +1,9 @@
-package com.example.livedataexample.password
+package com.example.livedataexample.inputTimmer
 
-import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class PasswordViewModel : ViewModel() {
+class InputTimmerViewModel : ViewModel() {
 
      private var password: MutableLiveData<String>? = null
 

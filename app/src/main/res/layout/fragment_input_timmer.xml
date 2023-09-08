@@ -1,11 +1,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <import type="com.example.livedataexample.password.PasswordViewModel"/>
+        <import type="com.example.livedataexample.inputTimmer.InputTimmerViewModel"/>
 
         <variable
             name="viewModel"
-            type="com.example.livedataexample.password.PasswordViewModel" />
+            type="com.example.livedataexample.inputTimmer.InputTimmerViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,8 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/mPasswordInputLayout"
+            android:id="@+id/mTimeInputLayout"
+            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black" />
